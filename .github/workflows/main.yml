@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   example-job:
-    runs-on: ubuntuo-latest
+    runs-on: ubuntu-latest
     steps:
       - name: print welcome message 
         run: echo "welcome to our first workflow / github actions work" 
