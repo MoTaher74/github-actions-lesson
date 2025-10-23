@@ -1,0 +1,24 @@
+name: Push | Pull_request Workflow
+# this is Triggered on push or pull request events but only for the main branch
+on:
+  # Trigger the workflow on push or pull request events but only for the main branch
+  push:
+    branches:
+      - main
+      - "release/**"
+      # only for changes in src directory
+    paths:
+      - "src/**"
+  Pull_request:
+    branches:
+      - main
+      - "release/**"
+# Define the jobs to run in this workflow
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository code
+        uses: actions/checkout@v5.0.0
+      - name: Run tests
+        run: Run tests
